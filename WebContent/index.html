@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>文件上传</title>
+</head>
+<body>
+	<form id="form1" method="post" action="springService/upload.do"
+		enctype="multipart/form-data">
+		<div>
+			添加上传文件:
+			<div>
+				<input type="file" name="file1" />
+			</div>
+			<div>
+				<input type="submit" />
+			</div>
+		</div>
+	</form>
+
+	<div>
+		<label>验证码：</label> <input type="text" class="text2" id="loginCode" />
+		<img id="codeImg" src="springService/genVerfCode.do"
+			title="看不清楚?请点击刷新验证码" style="cursor:pointer;margin-bottom: -8px;"></img>
+		<a onclick="changeCode()" href="#">换一张</a>
+	</div>
+</body>
+</html>
